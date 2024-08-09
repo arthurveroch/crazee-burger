@@ -22,7 +22,7 @@ export default function LoginPage() {
 
 const LoginPageStyled = styled.div`
   width: 100%;
-  height: 100svh;
+  min-height: 100svh;
   background-image: url('../src/assets/images/background-login.jpeg');
   background-size: cover;
   background-position: center;
@@ -31,7 +31,7 @@ const LoginPageStyled = styled.div`
 
   .background-overlay {
     width: 100%;
-    height: 100svh;
+    min-height: 100svh;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
