@@ -1,16 +1,13 @@
 import LoginForm from '../components/LoginForm';
 import styled from 'styled-components';
+import Logo from '../components/Logo';
 
 export default function LoginPage() {
   return (
     <>
       <LoginPageStyled>
         <div className='background-overlay'>
-          <div className='logo'>
-            <h1 className='logo-text'>Crazee</h1>
-            <img src='../src/assets/images/logo.png' />
-            <h1 className='logo-text'>Burger</h1>
-          </div>
+          <Logo />
           <div className='form'>
             <h1>Bienvenue chez nous ! </h1>
             <span className='line'></span>
@@ -43,22 +40,6 @@ const LoginPageStyled = styled.div`
     flex-direction: column;
   }
 
-  .logo {
-    display: flex;
-    gap: 20px;
-  }
-
-  .logo img {
-    width: 200px;
-  }
-
-  .logo-text {
-    font-family: 'Amatic SC', sans-serif;
-    font-weight: 700;
-    font-size: 110px;
-    color: #ff9f1b;
-  }
-
   .form {
     width: 464px;
     height: 438px;
@@ -83,7 +64,8 @@ const LoginPageStyled = styled.div`
   }
 
   .line {
-    width: 400px;
+    width: 200px;
+    max-width: 400px;
     height: 3px;
     background-color: #f56a2c;
     margin-top: 32px;
