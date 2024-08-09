@@ -8,7 +8,7 @@ export default function ({
   ...restProps
 }) {
   return (
-    <InputStyled className={className}>
+    <InputStyled className={className ? className : undefined}>
       {inputIcon ? inputIcon : ''}
       <input value={value} onChange={onChange} {...restProps}></input>
     </InputStyled>
