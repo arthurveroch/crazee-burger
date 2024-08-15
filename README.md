@@ -1,6 +1,7 @@
 Crazee Burger
 
-Description
+Description:
+
 Crazee Burger est un projet d'application web développé en utilisant React et Vite. Cette application est conçue pour simuler une interface utilisateur pour un restaurant de burgers, permettant aux utilisateurs de parcourir le menu, de personnaliser leurs commandes, et de passer commande.
 
 Fonctionnalités:
