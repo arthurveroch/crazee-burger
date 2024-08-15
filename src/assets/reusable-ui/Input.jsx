@@ -1,10 +1,26 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 
-export default function Input({ icon, placeholder, type }) {
+export default function Input({
+  icon,
+  placeholder,
+  type,
+  style,
+  onChange,
+  value,
+  required,
+}) {
   return (
     <InputStyled>
       {icon}
-      <input type={type} placeholder={placeholder} />
+      <input
+        required={required}
+        value={value}
+        onChange={onChange}
+        style={style}
+        type={type}
+        placeholder={placeholder}
+      />
     </InputStyled>
   );
 }

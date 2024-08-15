@@ -23,9 +23,12 @@ export default function LoginForm() {
     <LoginFormStyled>
       <h2>Bienvenue chez nous !</h2>
       <span></span>
-      <form value={name} onChange={handleChange} onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <h3>Connectez-vous</h3>
         <Input
+          required
+          value={name}
+          onChange={handleChange}
           type={'text'}
           placeholder={'Entrez votre prénom'}
           icon={<IoPersonCircleOutline />}

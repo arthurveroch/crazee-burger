@@ -6,3 +6,6 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+@media (hover: none) and (max-width: 1024px) {
+}
