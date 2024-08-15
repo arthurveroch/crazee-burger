@@ -1,8 +1,39 @@
-# React + Vite
+Crazee Burger
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Description:
 
-Currently, two official plugins are available:
+Crazee Burger est un projet d'application web développé en utilisant React et Vite. Cette application est conçue pour simuler une interface utilisateur pour un restaurant de burgers, permettant aux utilisateurs de parcourir le menu, de personnaliser leurs commandes, et de passer commande.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Fonctionnalités:
+
+Affichage dynamique des éléments du menu
+Personnalisation des commandes
+Ajout au panier et gestion des commandes
+Responsive design pour une expérience optimale sur tous les appareils
+
+Installation:
+
+Clonez le dépôt :
+git clone https://github.com/arthurveroch/crazee-burger.git
+
+Accédez au répertoire du projet :
+cd crazee-burger
+
+Installez les dépendances :
+npm install
+
+Démarrez le serveur de développement :
+npm run dev
+
+Utilisation:
+
+Ouvrez votre navigateur et accédez à http://localhost:port pour interagir avec l'application.
+
+Technologies utilisées:
+
+React
+Vite
+CSS
+ESLint
+
+
