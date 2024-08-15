@@ -3,13 +3,27 @@ import Input from '../../assets/reusable-ui/Input';
 import Button from '../../assets/reusable-ui/Button';
 import { IoPersonCircleOutline } from 'react-icons/io5';
 import { GoChevronRight } from 'react-icons/go';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginForm() {
+  const [name, setName] = useState('');
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/order/${name}`);
+  };
+
   return (
     <LoginFormStyled>
       <h2>Bienvenue chez nous !</h2>
       <span></span>
-      <form>
+      <form value={name} onChange={handleChange} onSubmit={handleSubmit}>
         <h3>Connectez-vous</h3>
         <Input
           type={'text'}
