@@ -11,6 +11,7 @@ function App() {
           <Route path='/' element={<Login />} />
           <Route path='*' element={<Error />} />
           <Route path='/order/:name' element={<Order />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       </BrowserRouter>
     </>

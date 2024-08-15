@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { reload } from '../../utils/Reload';
 
-export default function UserInfos({ icon, name }) {
+export default function UserInfos({ icon, name, onClick }) {
   return (
     <UserInfosStyled>
       <div className='user-infos'>
@@ -11,8 +12,7 @@ export default function UserInfos({ icon, name }) {
           </h4>
         </div>
         <span className='deconnexion'>
-          {' '}
-          <Link to='/'>Se déconnecter</Link>
+          <p onClick={reload}>Se déconnecter</p>
         </span>
       </div>
 
@@ -44,12 +44,12 @@ const UserInfosStyled = styled.div`
     font-weight: 700;
   }
 
-  a {
+  p {
     color: #747b91;
-    text-decoration: none;
     font-size: 10px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 200;
+    cursor: pointer;
   }
 
   svg {
