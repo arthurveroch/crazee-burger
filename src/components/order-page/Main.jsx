@@ -1,7 +1,12 @@
 import styled from 'styled-components';
+import Product from './Product';
 
 export default function Main() {
-  return <MainStyled></MainStyled>;
+  return (
+    <MainStyled>
+      <Product />
+    </MainStyled>
+  );
 }
 
 const MainStyled = styled.div`
