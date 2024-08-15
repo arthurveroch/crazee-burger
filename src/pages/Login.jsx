@@ -1,12 +1,16 @@
 import styled from 'styled-components';
-import Logo from '../components/login-page/Logo';
+import Logo from '../assets/reusable-ui/Logo';
 import LoginForm from '../components/login-page/LoginForm';
 
 export default function () {
   return (
     <LoginStyled>
       <div className='background-overlay'>
-        <Logo />
+        <Logo
+          textSize={{ fontSize: '110px' }}
+          imgSize={{ width: '200px', height: '150px' }}
+          src={'/images/login-page/burger-logo.png'}
+        />
         <LoginForm />
       </div>
     </LoginStyled>
