@@ -20,4 +20,12 @@ const ButtonStyled = styled.button`
   border-radius: 5px;
   font-family: 'arial', sans-serif;
   gap: 10px;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
+
+  &:hover {
+    background: #fff;
+    color: #ff9f1b;
+    border: 1px solid #ff9f1b;
+  }
 `;
