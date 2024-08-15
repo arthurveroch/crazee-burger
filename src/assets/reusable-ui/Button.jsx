@@ -18,6 +18,7 @@ const ButtonStyled = styled.button`
   align-items: center;
   height: 53px;
   border-radius: 5px;
+  border: 1px solid transparent;
   font-family: 'arial', sans-serif;
   gap: 10px;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out,
