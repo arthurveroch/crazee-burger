@@ -12,23 +12,23 @@ export default function NavbarRightSide({ name }) {
   const [isAdmin, setIsAdmin] = useState(false);
 
   const notify = () => {
-    toast.info('Mode admin activé', {
-      icon: <FaUserSecret size={30} />,
-      theme: 'dark',
-      position: 'bottom-right',
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    if (isAdmin) {
+      toast.info('Mode admin activé', {
+        icon: <FaUserSecret size={30} />,
+        theme: 'dark',
+        position: 'bottom-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
   };
 
   useEffect(() => {
-    if (isAdmin) {
-      notify();
-    }
+    notify();
   }, [isAdmin]);
 
   const handleToggle = () => {
