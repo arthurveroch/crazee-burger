@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import Logo from '../../assets/reusable-ui/Logo';
-import UserInfos from '../../assets/reusable-ui/UserInfos';
 import { reload } from '../../utils/Reload';
-import { IoPersonCircleOutline } from 'react-icons/io5';
+import NavbarRightSide from './NavbarRightSide';
 
 export default function Navbar({ name }) {
   return (
@@ -13,7 +12,7 @@ export default function Navbar({ name }) {
         src={'/images/login-page/burger-logo.png'}
         onClick={reload}
       />
-      <UserInfos icon={<IoPersonCircleOutline />} name={name} />
+      <NavbarRightSide name={name} />
     </NavbarStyled>
   );
 }

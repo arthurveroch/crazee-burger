@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { reload } from '../../utils/Reload';
 
-export default function UserInfos({ icon, name, onClick }) {
+export default function UserInfos({ icon, name }) {
   return (
     <UserInfosStyled>
       <div className='user-infos'>
@@ -22,15 +22,13 @@ export default function UserInfos({ icon, name, onClick }) {
 }
 
 const UserInfosStyled = styled.div`
-  width: 120px;
+  min-width: 120px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   column-gap: 4px;
 
   .name {
     display: flex;
-    justify-content: flex-end;
     font-family: 'Open Sans', sans-serif;
   }
 
