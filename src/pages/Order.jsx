@@ -3,14 +3,25 @@ import { useParams } from 'react-router-dom';
 import Navbar from '../components/order-page/Navbar';
 import Main from '../components/order-page/Main';
 import styled from 'styled-components';
+import AdminContext from '../context/AdminContext';
+import { useState } from 'react';
 export default function Order() {
+  const [isAdmin, setIsAdmin] = useState(false);
   const { name } = useParams();
+
+  const valueAdminContext = {
+    isAdmin,
+    setIsAdmin,
+  };
+
   return (
     <OrderStyled>
-      <div className='container'>
-        <Navbar name={name} />
-        <Main />
-      </div>
+      <AdminContext.Provider value={valueAdminContext}>
+        <div className='container'>
+          <Navbar name={name} />
+          <Main />
+        </div>
+      </AdminContext.Provider>
     </OrderStyled>
   );
 }

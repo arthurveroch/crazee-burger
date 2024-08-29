@@ -7,12 +7,14 @@ import UserInfos from '../../assets/reusable-ui/UserInfos';
 import { IoPersonCircleOutline } from 'react-icons/io5';
 import ToggleButton from './ToggleButton';
 import { FaUserSecret } from 'react-icons/fa';
+import { useContext } from 'react';
+import AdminContext from '../../context/AdminContext';
 
 export default function NavbarRightSide({ name }) {
-  const [isAdmin, setIsAdmin] = useState(false);
+  const admin = useContext(AdminContext);
 
   const notify = () => {
-    if (isAdmin) {
+    if (admin.isAdmin) {
       toast.info('Mode admin activé', {
         icon: <FaUserSecret size={30} />,
         theme: 'dark',
@@ -29,14 +31,14 @@ export default function NavbarRightSide({ name }) {
 
   useEffect(() => {
     notify();
-  }, [isAdmin]);
+  }, [admin.isAdmin]);
 
   const handleToggle = () => {
-    setIsAdmin(!isAdmin);
+    admin.setIsAdmin(!admin.isAdmin);
   };
   return (
     <NavbarRightSideStyled>
-      <ToggleButton isChecked={isAdmin} onToggle={handleToggle} />
+      <ToggleButton isChecked={admin.isAdmin} onToggle={handleToggle} />
       <UserInfos icon={<IoPersonCircleOutline />} name={name} />
       <ToastContainer className='toaster' bodyClassName='body-toast' />
     </NavbarRightSideStyled>
