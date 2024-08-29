@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import Product from './Product';
+import Admin from './admin/Admin';
 
 export default function Main() {
   return (
     <MainStyled>
       <Product />
+      <Admin />
     </MainStyled>
   );
 }
